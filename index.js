@@ -6,6 +6,11 @@ const clouds = document.querySelector("#clouds");
 const score = document.querySelector("#score");
 const life_counter = document.querySelector("#life-counter");
 
+const gameplay_audio = new Audio("./audios/Super Mario Bros. Theme Song.mp3");
+const death_audio = new Audio("./audios/Mario deathGame over sound effect.mp3");
+
+const start_game = document.querySelector("#start-button");
+
 const handleKeydown = (event) => {
   if (event.key === " ") {
     mario.classList.add("jump");
@@ -49,7 +54,16 @@ const gameOverAnimation = (pipe_x_position, clouds_position) => {
   clouds.style.left = `${clouds_position}px`;
 
   life_counter.innerHTML = `X${life}`;
+  gameplay_audio.pause();
+  death_audio.play();
 };
 
 checkGameOver();
+
+const startGame = () => {
+  gameplay_audio.play();
+};
+
 document.addEventListener("keydown", handleKeydown);
+
+start_game.addEventListener("click", startGame);
