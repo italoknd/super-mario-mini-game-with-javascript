@@ -19,6 +19,16 @@
   color: #242323;
 }
 
+.life-container {
+  display: flex;
+  align-items: center;
+}
+
+.mario-head {
+  height: 50px;
+  margin-right: 10px;
+}
+
 .game-board {
   width: 80%;
   height: 500px;
