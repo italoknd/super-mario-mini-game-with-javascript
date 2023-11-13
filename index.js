@@ -62,6 +62,9 @@ checkGameOver();
 
 const startGame = () => {
   gameplay_audio.play();
+  start_game.style.display = "none";
+  mario.style.display = "block";
+  pipe.style.display = "block";
 };
 
 document.addEventListener("keydown", handleKeydown);

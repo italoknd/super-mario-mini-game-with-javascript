@@ -47,7 +47,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 80px;
-
+  display: none;
   animation: move-pipe 2s infinite linear;
 }
 
@@ -55,6 +55,7 @@ body {
   position: absolute;
   bottom: 0;
   width: 150px;
+  display: none;
 }
 
 .mario-game-over {
@@ -128,11 +129,11 @@ body {
 #restart-container {
   width: 100%;
   height: 100%;
-  display: none;
 }
 
 #restart-button {
-  display: flex;
+  display: none;
+  /* display: flex; */
   justify-content: center;
   align-content: center;
 
