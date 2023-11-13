@@ -128,6 +128,7 @@ body {
 #restart-container {
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 #restart-button {
@@ -138,6 +139,26 @@ body {
   border-radius: 4px;
   padding: 20px;
   background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: auto;
+}
+
+#start-container {
+  width: 100%;
+  height: 100%;
+}
+
+#start-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 4px;
+  padding: 20px;
+  background-color: rgb(19, 202, 80);
   color: white;
   border: none;
   cursor: pointer;
