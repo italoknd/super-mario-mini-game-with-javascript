@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.game-infos {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.game-infos > div {
+  font-size: 20px;
+  font-weight: bold;
+  color: #242323;
+}
+
+.game-board {
+  width: 80%;
+  height: 500px;
+  border: 1px solid #1f1f1f;
+  margin: 0 auto;
+  position: relative;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+
+  animation: move-pipe 2s infinite linear;
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  width: 150px;
+}
+
+.mario-game-over {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: game-over 2s ease-in-out;
+  display: none;
+}
+
+.jump {
+  animation: jump 1s ease-out;
+}
+
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200px;
+  animation: clouds-movement 1.5s infinite linear;
+}
+
+@keyframes move-pipe {
+  from {
+    right: -80px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0px;
+  }
+  40% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes clouds-movement {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes game-over {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 50%;
+  }
+  45% {
+    bottom: 50%;
+  }
+  100% {
+    bottom: -40%;
+  }
+}
