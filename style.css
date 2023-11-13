@@ -7,6 +7,12 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  background: rgb(26, 26, 26);
+}
+
 .game-infos {
   display: flex;
   justify-content: space-between;
@@ -16,7 +22,7 @@
 .game-infos > div {
   font-size: 20px;
   font-weight: bold;
-  color: #242323;
+  color: white;
 }
 
 .life-container {
@@ -117,4 +123,24 @@
   100% {
     bottom: -40%;
   }
+}
+
+#restart-container {
+  width: 100%;
+  height: 100%;
+}
+
+#restart-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin: auto;
 }
